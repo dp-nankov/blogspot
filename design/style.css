@@ -1,0 +1,671 @@
+/* GLOBAL */
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+}
+
+input[type="text"], input[type="password"], input[type="number"] {
+    border: 2.5px solid #2b3238;
+    height:27.5px; 
+    width: 250px;
+    border-radius: 13px;
+    font-size: 17px;
+    font-family: 'Roboto Condensed', 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+textarea {
+    border: 2.5px solid #2b3238;
+    height:27.5px; 
+    width: 250px;
+    border-radius: 13px;
+    font-size: 17px;
+    font-family: 'Roboto Condensed', 'Times New Roman', Times, serif;
+    font-weight: bold;
+    resize: none;
+}
+
+textarea:focus {
+    outline: none;
+    border: 2.5px solid #6DAEDB;
+    box-shadow: 0 0 7px #6DAEDB; 
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="number"]:focus {
+    outline: none;
+    border: 2.5px solid #6DAEDB;
+    box-shadow: 0 0 7px #6DAEDB; 
+}
+
+button, input[type="submit"] {
+    background-color: #6DAEDB;
+    font-size: 32px;
+    font-family: 'Roboto Condensed', 'Times New Roman', Times, serif;
+    color: #2b3238;
+    font-weight: bold;
+    padding: 4px 30px;
+    border-radius: 30px;
+    border: 3px solid black;
+    cursor: pointer;
+}
+
+button:hover, input[type="submit"]:hover{
+    color: white;
+    background-color: #1D70A2;
+}
+
+.glowing-text {
+    text-shadow: 0 0 10px #6DAEDB;
+}
+
+main {
+    min-height: 60.5%;
+}
+
+.server-error{
+    color: red;
+    font-family: 'Roboto Condensed', 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+
+.label p{
+    font-size: 26px;
+    font-family: 'Roboto Condensed', 'Times New Roman', Times, serif;
+    color: #2b3238;
+    font-weight: bold;
+}
+
+.label{
+    text-align: center;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+
+
+
+/* HEADER */
+
+.header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    overflow: visible;
+    z-index: 3;
+}
+.navigation {
+    background-color: #2b3238;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    position: relative;
+    height: auto;
+}
+
+.header ul {
+    display: flex;
+    float: right;
+}
+
+.header li {
+    display: inline;
+    float: right;
+    margin-right: 25px;
+}
+
+.header-logo h1 {
+    float: left;
+    padding: 0;
+    margin: 0px 0px 0px 30px;
+    vertical-align: middle;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-size: 35px;
+    color: #6DAEDB;
+    font-family: 'Quicksand', 'Times New Roman', Times, serif;
+}
+
+.header-logo h1:hover{
+    color: white;
+}
+
+.header ul a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    font-family: 'Roboto Condensed', 'Times New Roman', Times, serif;
+    font-size: 24px;
+}
+
+.header ul a:hover {
+    text-decoration: underline;
+    color: #6DAEDB;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.header ul a:active {
+    text-shadow: 0 0 15px #6DAEDB;
+}
+
+.active {
+    color: #6DAEDB;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+}
+
+
+
+
+/* ADS */
+
+#item-list {
+    padding-top: 80px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+#home-search {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 70%;
+    text-align: center;
+    min-height: 10%;
+    overflow: hidden;
+}
+
+input[type="number"]{
+    width: 10%;
+}
+
+input{
+    margin-right: 4px;
+}
+
+
+
+/* AD */
+
+.item {
+    display: inline-block;
+    margin: 10px;
+    width: 20%;
+    text-align: center;
+    border: 3.5px solid #6DAEDB;
+    border-radius: 15px;
+    height: 450px;
+    padding: 10px;
+    min-width: 320px;
+}
+
+.item-icon {
+    object-fit: cover;
+    height: 230px;
+    width: 230px;
+}
+
+.item-info-div {
+    display: block;
+    /* border: 3.5px solid #6DAEDB; */
+    margin: 1px;
+    height: 120px;
+    padding: 0px;
+}
+
+.item-icon-div {
+    display: block;
+    /* border: 3.5px solid #6DAEDB; */
+    margin: 3px;
+}
+
+.item-buttons-div {
+    display: block;
+    /* border: 3.5px solid #6DAEDB; */
+    margin: 1px;
+}
+
+.item-info-div p {
+    font-family: 'Roboto', 'Times New Roman', Times, serif;
+}
+
+.item-info-div h2 {
+    font-family: 'Roboto Condensed', 'Times New Roman', Times, serif;
+}
+
+.item-buttons-div button {
+    font-size: 24px;
+    padding: 1px 25px;
+    margin-left: 10px;
+}
+a{
+    color: #2b3238;
+    text-decoration: none;    
+}
+
+a:hover{
+    text-decoration: underline;
+    color: #6DAEDB;
+}
+
+#price{
+    color: #2b3238;
+    font-weight: bold;
+    font-size: 21px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.date-box{
+    margin-top: 1px;
+    padding: 0px;
+}
+
+.inline{
+    display: inline-block;
+    margin: 0px;
+}
+
+p{
+    font-family: 'Roboto Condensed', 'Times New Roman', Times, serif;
+}
+
+.date-label{
+    font-weight: bold;
+}
+
+.date{
+    font-style: italic;
+    margin-left: 3px;
+}
+
+
+/* LOGIN */
+
+#login-form {
+    min-height: auto;
+    padding-top: 90px;
+    padding-bottom: 122px;
+}
+
+form {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    width: 70%;
+    text-align: center;
+}
+
+.form-group{
+    margin-bottom: 13px;
+}
+
+button{
+    font-size: 20px;
+    margin-top: 12px;
+}
+
+.error{
+    margin: 2px;
+    color: red;
+    font-style: italic;
+    font-family: 'Roboto', 'Times New Roman', Times, serif;
+    font-size: 14px;
+}
+
+.red {
+    outline: none;
+    border: 2.5px solid red;
+    box-shadow: 0 0 7px red; 
+}
+
+button:disabled {
+    background-color: gray;
+}
+
+
+/* REGISTER */
+
+#register-form {
+    min-height: auto;
+    padding-top: 90px;
+    padding-bottom: 122px;
+}
+
+form {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    width: 70%;
+    text-align: center;
+}
+
+.form-group{
+    margin-bottom: 13px;
+}
+
+button{
+    font-size: 20px;
+    margin-top: 12px;
+}
+
+.error{
+    margin: 2px;
+    color: red;
+    font-style: italic;
+    font-family: 'Roboto', 'Times New Roman', Times, serif;
+    font-size: 14px;
+}
+
+.red {
+    outline: none;
+    border: 2.5px solid red;
+    box-shadow: 0 0 7px red; 
+}
+
+button:disabled {
+    background-color: gray;
+}
+
+
+/* CREATE */
+
+#create-form {
+    min-height: auto;
+    padding-top: 90px;
+    padding-bottom: 122px;
+}
+
+form {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    width: 70%;
+    text-align: center;
+}
+
+.form-group{
+    margin-bottom: 13px;
+}
+
+button{
+    font-size: 20px;
+    margin-top: 12px;
+}
+
+.error{
+    margin: 2px;
+    color: red;
+    font-style: italic;
+    font-family: 'Roboto', 'Times New Roman', Times, serif;
+    font-size: 14px;
+}
+
+.red {
+    outline: none;
+    border: 2.5px solid red;
+    box-shadow: 0 0 7px red; 
+}
+
+button:disabled {
+    background-color: gray;
+}
+
+
+
+/* DETAILS */
+
+
+#details{
+    padding-top: 120px;
+    text-align: center;
+    overflow: hidden;
+
+}
+
+p {
+    display: inline-block;
+    font-family: 'Roboto Condensed', 'Times New Roman', Times, serif;
+    font-size: 18px;
+}
+
+.p-label {
+    font-weight: bold;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
+img {
+    object-fit: cover;
+    height: 230px;
+    width: 230px;
+}
+
+
+/* COMMENT FORM */
+
+#comment-form{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.text-area{
+    width: 30%;
+    height: 75px;
+    margin-top: 15px;
+}
+
+.commentBtn{
+    font-size: 18px;
+}
+
+a{
+    color: #2b3238;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Roboto Condensed', 'Times New Roman', Times, serif;
+    font-weight: bold;    
+}
+
+a:hover{
+    text-decoration: underline;
+    color: #6DAEDB;
+    cursor: pointer;
+}
+
+.edit-btn{
+    margin-right: 10px;
+}
+
+
+
+
+/* COMMENTS */
+
+#comments{
+    text-align: center;
+    margin-top: 60px;
+    overflow: hidden;
+}
+
+#comment-section{
+    text-align: center;
+    width: 100%;
+    position: relative;
+    height: auto;
+    margin-bottom: 15px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.comment-card{
+    margin: auto;
+    border: 3.5px solid #6DAEDB;
+    border-radius: 15px;
+    width: 40%;
+    position: relative;
+    overflow: hidden;
+
+}
+
+p{
+    font-family: 'Roboto Condensed', 'Times New Roman', Times, serif;
+}
+
+.username{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.cdate{
+    display: inline-block;
+    font-size: 13px;
+    font-style: italic;
+    margin-left: 10px;
+}
+#deleteBtn{
+    display: inline-block;
+    font-size: 16px;
+    color:red;
+}
+
+#deleteBtn:hover{
+    color: rgb(119, 3, 3);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.username-box{
+    text-align: left;
+    padding-left: 16px;
+    display: inline-block;
+    width: 45%;
+}
+.date-box{
+    display: inline-block;
+    width: 45%;
+    text-align: right;
+}
+.comment-text{
+    margin: 0px;
+    margin-bottom: 8px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.deleted{
+    color: red;
+    font-style: italic;
+}
+
+
+/* MY PROFILE */
+
+#my-profile{
+    padding-top: 100px;
+    text-align: center;
+}
+
+p {
+    display: inline-block;
+    font-family: 'Roboto Condensed', 'Times New Roman', Times, serif;
+    font-size: 18px;
+}
+
+.p-label {
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.label p{
+    font-size: 26px;
+    font-family: 'Roboto Condensed', 'Times New Roman', Times, serif;
+    color: #2b3238;
+    font-weight: bold;
+}
+
+
+
+/* HOME GUEST */
+
+
+#home-guest {
+    min-height: auto;
+    padding-top: 90px;
+    padding-bottom: 60px;
+}
+
+.signup-div {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    width: 70%;
+    text-align: center;
+}
+
+#home-guest p {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    text-align: center;
+    font-family: 'Roboto', 'Times New Roman', Times, serif;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.signin-a {
+    text-decoration: none;
+    color: #6DAEDB;
+    text-shadow: -1px 0 #1D70A2 0 1px #1D70A2, 1px 0 #1D70A2, 0 -1px #1D70A2;
+}
+
+.signin-a:hover {
+    text-decoration: underline;
+    color: #1D70A2;
+}
+
+#home-guest h1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
+    width: 70%;
+    text-align: center;
+    font-family: 'Roboto', 'Times New Roman', Times, serif;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+#home-search {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    width: 70%;
+    text-align: center;
+    min-height: 10%;
+    position: relative;
+}
+
+#home-search input[type="submit"] {
+    font-size: 20px;
+    padding: 2.5px 15px;
+    margin-left: 10px;
+}

@@ -1,21 +1,24 @@
 import styles from './Header.module.css';
+import { Link } from 'react-router-dom';
 
 export default function Header() {
 
 
     return (
-        <header className={styles.header}>
-            <div className = {styles.logoDiv}>
-                <h1>Blogspot</h1>
+        <section className={styles["header"]}>
+            <div className={styles["navigation"]}>
+                <Link to="/" className={styles["header-logo"]}>
+                    <h1>Blogspot</h1>
+                </Link>
+                <ul>
+                    <li><a href="#">Ads</a></li>
+                    <li><a href="#">New Ad</a></li>
+                    <li><Link to="/my-profile">My Profile</Link></li>
+                    <li><a href="#">Logout</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Register</a></li>
+                </ul>
             </div>
-            <nav>
-                <a href="#">Home</a>
-                <a href="#">Posts</a>
-            </nav>
-            <div className = {styles.authBtns}>
-                <a href="#"><button>Login</button></a>
-                <a href="#"><button>Sign Up</button></a>
-            </div>
-        </header>
+        </section>
     );
 }
