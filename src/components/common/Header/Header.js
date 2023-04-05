@@ -11,7 +11,7 @@ export default function Header() {
                     <h1>Blogspot</h1>
                 </Link>
                 <ul>
-                    <li><a href="#">Ads</a></li>
+                    <li><Link to="/ads">Ads</Link></li>
                     <li><a href="#">New Ad</a></li>
                     <li><Link to="/my-profile">My Profile</Link></li>
                     <li><a href="#">Logout</a></li>
