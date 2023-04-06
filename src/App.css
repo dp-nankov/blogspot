@@ -69,6 +69,7 @@ main {
   color: red;
   font-family: 'Roboto Condensed', 'Times New Roman', Times, serif;
   font-style: italic;
+  display: block;
 }
 
 .label p{

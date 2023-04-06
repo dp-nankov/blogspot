@@ -12,11 +12,11 @@ export default function Header() {
                 </Link>
                 <ul>
                     <li><Link to="/ads">Ads</Link></li>
-                    <li><a href="#">New Ad</a></li>
+                    <li><Link to="/ads/create">New Ad</Link></li>
                     <li><Link to="/my-profile">My Profile</Link></li>
                     <li><a href="#">Logout</a></li>
-                    <li><a href="#">Login</a></li>
-                    <li><a href="#">Register</a></li>
+                    <li><Link to="/login">Login</Link></li>
+                    <li><Link to="/sign-up">Register</Link></li>
                 </ul>
             </div>
         </section>
