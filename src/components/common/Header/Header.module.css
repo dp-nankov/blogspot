@@ -18,6 +18,7 @@
 .header ul {
     display: flex;
     float: right;
+    align-items: center;
 }
 
 .header li {
@@ -51,6 +52,16 @@
     cursor: pointer;
     font-family: 'Roboto Condensed', 'Times New Roman', Times, serif;
     font-size: 24px;
+    margin:auto;
+}
+
+.header p{
+    display: block;
+    text-decoration: none;
+    color: #6DAEDB;
+    font-family: 'Roboto Condensed', 'Times New Roman', Times, serif;
+    font-size: 20px;
+    margin: 0;
 }
 
 .header ul a:hover {

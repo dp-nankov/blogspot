@@ -53,7 +53,7 @@ function login(req, res, next) {
         })
         .then(([user, match]) => {
             if (!match) {
-                res.status(401)
+                res.status(403)
                     .send({ message: 'Wrong email or password' });
                 return
             }
@@ -61,6 +61,7 @@ function login(req, res, next) {
             user = removePassword(user);
 
             const token = utils.jwt.createToken({ id: user._id });
+
 
             if (process.env.NODE_ENV === 'production') {
                 res.cookie(authCookieName, token, { httpOnly: true, sameSite: 'none', secure: true })

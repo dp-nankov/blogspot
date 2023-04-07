@@ -1,9 +1,18 @@
 import styles from './Ads.module.css';
 import Ad from '../Ad/Ad';
+import { useEffect, useState } from 'react';
+import {getAll} from '../../../services/adService'
 
 export default function Ads(){
+    const [allAds, setAllAds] = useState([]);
 
-
+    useEffect(() => {
+        async function fetchAll() {
+            const result = await getAll();
+            setAllAds((prev) => result)
+        }
+        fetchAll()
+    }, [])
 
     return (
         <section className={styles["item-list"]}>
@@ -14,7 +23,7 @@ export default function Ads(){
             <input type="number" placeholder="Price to:"/>
         </div>
 
-        <Ad />
+        {allAds.map((x) => (<Ad key={x._id} {...x}/>))}
 
         <div className={styles["label"]}>
             <p>No ads to show.</p>

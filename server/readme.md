@@ -1,4 +1,4 @@
-# REST-api for Angular project Flyerly
+
 
 ## Getting started
 Let's make our first API request to the REST-api!
