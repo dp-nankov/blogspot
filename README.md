@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+#Blogspot React App Documentation
+Introduction
+Blogspot is a React-based web application designed for posting ads. It comes with a variety of features including a landing page for guest users, a page with all ads and filters, a details page for logged-in users only, an edit page for logged-in users that are also the owners of the edited ad, a login page, a sign-up page, a my-profile page for logged-in users, and a new ad page for creating new ads. The app uses a REST API written in ExpressJS and a MongoDB database.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#Getting Started
+To get started with Blogspot, follow these instructions:
 
-## Available Scripts
+Clone the repository from [GitHub link].
+Navigate to the "server" folder and install all the required dependencies using npm install.
+Start the server by running the command npm start.
+Navigate to the "client" folder and install all the required dependencies using npm install.
+Start the client by running the command npm start.
+Features
+Landing Page
+The landing page provides a brief overview of the app and its purpose. Guest users can browse the page but cannot access other parts of the app until they log in or sign up.
 
-In the project directory, you can run:
+#Ads Page
+The Ads page displays all ads posted on the app with filters that can be used to narrow down the search. Users can view ad details and contact the ad owners for more information.
 
-### `npm start`
+#Details Page
+The Details page provides more information about an ad, including the ad owner's contact information. Only logged-in users can access this page.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#Edit Page
+Logged-in users who are also the owners of an ad can edit their ad details using the Edit page.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#Login Page
+The Login page allows users to log in to their accounts to access restricted pages.
 
-### `npm test`
+#Sign-up Page
+The Sign-up page allows new users to create accounts.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#My-profile Page
+The My-profile page displays the user's profile information and their posted ads.
 
-### `npm run build`
+#New Ad Page
+The New Ad page allows logged-in users to create new ads.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#Architecture
+Blogspot uses a REST API written in ExpressJS to interact with a MongoDB database. The front-end of the app is written in ReactJS and follows a component-based architecture.

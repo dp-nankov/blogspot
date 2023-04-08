@@ -23,3 +23,13 @@ input[type="number"]{
 input{
     margin-right: 4px;
 }
+
+.label {
+    text-align: center;
+}
+
+.label p{
+    font-family: 'Roboto Condensed', 'Times New Roman', Times, serif;
+    font-size: 23px;
+    font-weight: bold;
+}

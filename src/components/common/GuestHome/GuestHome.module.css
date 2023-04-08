@@ -13,7 +13,7 @@
     text-align: center;
 }
 
-.home-guest p {
+.call-to-action {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -39,7 +39,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 70px;
+    margin-top: 60px;
     width: 70%;
     text-align: center;
     font-family: 'Roboto', 'Times New Roman', Times, serif;
@@ -63,3 +63,12 @@
     padding: 2.5px 15px;
     margin-left: 10px;
 }
+
+.item-list {
+    padding-top: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    text-align: center;
+}
+
+

@@ -9,7 +9,6 @@ import SignUp from './components/Auth/SignUp/SignUp';
 import CreateAd from './components/Ads/CreateAd/CreateAd';
 import { AuthContext } from './contexts/AuthContext';
 import * as authService from './services/authService';
-import * as adService from './services/adService'
 import { useState, useEffect } from 'react';
 import AdDetails from './components/Ads/AdDetails/AdDetails';
 import EditAd from './components/Ads/EditAd/EditAd'
@@ -19,8 +18,8 @@ import PrivateRoute from './utils/PrivateRoute';
 
 
 function App() {
-	const navigate = useNavigate();
 	const [auth, setAuth] = useState(null);
+	const navigate = useNavigate();
 
 	useEffect(() => {
 		async function getUser() {
@@ -34,24 +33,17 @@ function App() {
 		getUser();
 	}, []);
 
-	
-
-	const onSignupSubmit = async (data) => {
-		await authService.signup(data);
-	}
-
-
 	const onLogout = async () => {
 		await authService.logout();
 		setAuth((p) => null)
+		navigate('/', {replace: true})
 	}
 
 	return (
-		<AuthContext.Provider value={{ onSignupSubmit, onLogout, auth, setAuth }}>
+		<AuthContext.Provider value={{ onLogout, auth, setAuth }}>
 			<div className="App">
 				<Header />
 				<Routes>
-					<Route path="/" element={<GuestHome />} />
 					<Route element={<PrivateRoute path={'/login'} isAuthenticated={auth !== null} />} >
 						<Route path='/my-profile' element={<MyProfile />} />
 					</Route>
@@ -63,7 +55,8 @@ function App() {
 							<Route path='edit/:id' element={<EditAd />} />
 						</Route>
 					</Route>
-					<Route element={<PrivateRoute path={'/'} isAuthenticated={auth === null} />} >
+					<Route element={<PrivateRoute path={'/ads'} isAuthenticated={auth === null} />} >
+						<Route path="/" element={<GuestHome />} />
 						<Route path='/login' element={<Login />} />
 						<Route path='/sign-up' element={<SignUp />} />
 					</Route>

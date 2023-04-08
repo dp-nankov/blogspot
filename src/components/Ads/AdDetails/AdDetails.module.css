@@ -5,7 +5,7 @@
 
 }
 
-p {
+.details p {
     display: inline-block;
     font-family: 'Roboto Condensed', 'Times New Roman', Times, serif;
     font-size: 18px;
@@ -17,8 +17,23 @@ p {
     margin-bottom: 8px;
 }
 
-img {
+.details img {
     object-fit: cover;
     height: 230px;
     width: 230px;
+}
+
+.edit-ad{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.link-btn{
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Roboto Condensed', 'Times New Roman', Times, serif;
+    font-size: 20px;
 }

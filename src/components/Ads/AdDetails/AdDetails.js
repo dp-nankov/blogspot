@@ -1,30 +1,41 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { AuthContext } from '../../../contexts/AuthContext';
 import { getOne, del } from '../../../services/adService';
 import { getUserById } from '../../../services/authService';
 import styles from './AdDetails.module.css';
 
 export default function AdDetails(props){
+  const [serverError, setServerError] = useState(null);
     const [adInfo, setAdInfo] = useState({});
     const [user, setUser] = useState({})
+    const {auth} = useContext(AuthContext);
     const {id} = useParams();
 
     useEffect(() => {
-        async function fetchAll() {
-          const result = await getOne(id);
-          setAdInfo((prev) => result[0]);
-        }
-        fetchAll();
+        try {
+          async function fetchAll() {
+            const result = await getOne(id);
+            setAdInfo((prev) => result[0]);
+          }
+          fetchAll();
+      } catch (er) {
+          setServerError(p => true)
+      }
       }, [id]);
       
       useEffect(() => {
-        async function getUser() {
-          if (adInfo.userId) {
-            const result = await getUserById(adInfo.userId);
-            setUser((prev) => result);
+        try {
+          async function getUser() {
+            if (adInfo.userId) {
+              const result = await getUserById(adInfo.userId);
+              setUser((prev) => result);
+            }
           }
-        }
-        getUser();
+          getUser();
+      } catch (er) {
+          setServerError(p => true)
+      }
       }, [adInfo.userId]);
 
       async function handleDelete(){
@@ -33,9 +44,9 @@ export default function AdDetails(props){
 
     return (
         <section className={styles["details"]}>
-        <p className="server-error">Server error</p>
+        {serverError && <p className="server-error">Connection failed!</p>}
         <div className={styles["details-info"]}>
-            <img src="https://www.shutterstock.com/image-photo/french-bulldog-tshirt-walking-by-260nw-1770823628.jpg" />
+            <img src={adInfo.imgUrl} alt="img" />
             <div className={styles["info-card"]}>
                 <p className={styles["p-label"]}>Title:</p>
                 <p className={styles["p-value"]}>{adInfo.title}</p>
@@ -61,8 +72,8 @@ export default function AdDetails(props){
                 <p className={styles["p-value"]}>{user.username}</p>
             </div>
             <div className={styles["edit-ad"]}>
-            <Link to={`/ads/edit/${id}`} className={styles["edit-btn"]}>Edit</Link>
-            <Link onClick={handleDelete}>Delete</Link>
+            {auth._id === adInfo.userId && <Link to={`/ads/edit/${id}`} className={styles["link-btn"]}>Edit</Link>}
+            {auth._id === adInfo.userId && <Link onClick={handleDelete} className={styles["link-btn"]}>Delete</Link>}
             </div>
         </div>
     </section>
