@@ -33,11 +33,8 @@ function getAdCustomId(req, res, next) {
 async function createAd(req, res, next) {
     const { title, description, imgUrl, price } = req.body;
     const { _id: userId } = req.user;
-    if(!await adModel.find()){
         let customId = await adModel.find().sort({customId:-1}).limit(1).then(ad => ad[0].customId) + 1;
-    }else{
-        customId = 1
-    }
+
 
     adModel.create({ title, description, imgUrl, price, customId, userId })
         .then(updatedAd => {
@@ -53,6 +50,7 @@ async function createAd(req, res, next) {
 function editAd(req, res, next) {
     const { adId } = req.params;
     const { title, description, imgUrl, price } = req.body;
+    console.log(req.body);
     const { _id } = req.user;
 
 

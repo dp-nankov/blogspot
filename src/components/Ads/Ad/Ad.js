@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styles from './Ad.module.css';
 
 export default function Ad(props){
@@ -7,13 +8,13 @@ export default function Ad(props){
     return (
         <div className={styles["item"]}>
             <div className={styles["item-icon-div"]}>
-                <a href="#"><img className={styles["item-icon"]}
-                        src={props.imgUrl}/></a>
+                <Link to={`/ads/${props.customId}`}><img className={styles["item-icon"]}
+                        src={props.imgUrl}/></Link>
             </div>
             <div className={styles["item-info-div"]}>
-                <a>
+                <Link to={`/ads/${props.customId}`}>
                     <h2>{props.title}</h2>
-                </a>
+                </Link>
                 <p className={styles["price"]}>${props.price}</p>
             </div>
             <div className={styles["item-buttons-div"]}>

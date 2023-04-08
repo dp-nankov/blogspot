@@ -15,7 +15,6 @@ export default function Header() {
                 <ul>
                     {auth && <li><p>Hello, {auth.username}</p></li>}
                     <li><Link to="/ads">Ads</Link></li>
-                    
                     {auth && <li><Link to="/ads/create">New Ad</Link></li>}
                     {auth && <li><Link to="/my-profile">My Profile</Link></li>}
                     {auth && <li><Link onClick={onLogout}>Logout</Link></li>}

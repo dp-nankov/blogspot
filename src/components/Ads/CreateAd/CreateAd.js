@@ -9,7 +9,7 @@ export default function CreateAd(){
         price: '',
         imgUrl: ''
     });
-    
+
 
     const handleSubmit = (event) => {
         event.preventDefault();
