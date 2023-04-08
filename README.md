@@ -1,12 +1,12 @@
-Blogspot React App Documentation
+#Blogspot React App Documentation
 
-Introduction
+#Introduction
+
 Blogspot is a React-based web application designed for posting ads. It comes with a variety of features including a landing page for guest users, a page with all ads and filters, a details page for logged-in users only, an edit page , a login page, a sign-up page, a my-profile page , and a new ad page for creating new ads. The app uses a REST API written in ExpressJS and a MongoDB database.
 
-Getting Started
+#Getting Started
 
-To get started with Blogspot, follow these instructions:
-
+#To get started with Blogspot, follow these instructions:
 
 Navigate to the "server" folder and install all the required dependencies using npm install.
 Start the server by running the command npm start.
@@ -40,4 +40,5 @@ The My-profile page displays the user's profile information and their posted ads
 The New Ad page allows logged-in users to create new ads.
 
 #Architecture
+
 Blogspot uses a REST API written in ExpressJS to interact with a MongoDB database. The front-end of the app is written in ReactJS and follows a component-based architecture.
