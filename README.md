@@ -10,7 +10,7 @@ Blogspot is a React-based web application designed for posting ads. It comes wit
 
 Navigate to the "server" folder and install all the required dependencies using npm install.
 Start the server by running the command npm start.
-Navigate to the "client" folder and install all the required dependencies using npm install.
+Navigate to the base folder and install all the required dependencies using npm install.
 Start the client by running the command npm start.
 
 #Features

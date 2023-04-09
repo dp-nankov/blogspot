@@ -30,23 +30,23 @@ export default function MyProfile() {
             <div id="profile info">
                 <div className={styles["info-card"]}>
                     <p className={styles["p-label"]}>First Name:</p>
-                    <p className={styles["p-value"]}>Admin</p>
+                    <p className={styles["p-value"]}>{auth.firstName}</p>
                 </div>
                 <div className={styles["info-card"]}>
                     <p className={styles["p-label"]}>Last Name:</p>
-                    <p className={styles["p-value"]}>Adminov</p>
+                    <p className={styles["p-value"]}>{auth.lastName}</p>
                 </div>
                 <div className={styles["info-card"]}>
                     <p className={styles["p-label"]}>Email:</p>
-                    <p className={styles["p-value"]}>admin@dsads.dassds</p>
+                    <p className={styles["p-value"]}>{auth.email}</p>
                 </div>
                 <div className={styles["info-card"]}>
                     <p className={styles["p-label"]}>Username:</p>
-                    <p className={styles["p-value"]}>adminn</p>
+                    <p className={styles["p-value"]}>{auth.username}</p>
                 </div>
                 <div className={styles["info-card"]}>
                     <p className={styles["p-label"]}>Created:</p>
-                    <p className={styles["p-value"]}>04.04.2023</p>
+                    <p className={styles["p-value"]}>{auth.created_at ? auth.created_at.split('T')[0] : "N/A"}</p>
                 </div>
                 <div className={styles["info-card"]}>
                     <p className={styles["p-label"]}>My ads:</p>

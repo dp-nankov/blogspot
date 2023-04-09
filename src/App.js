@@ -13,6 +13,7 @@ import { useState, useEffect } from 'react';
 import AdDetails from './components/Ads/AdDetails/AdDetails';
 import EditAd from './components/Ads/EditAd/EditAd'
 import PrivateRoute from './utils/PrivateRoute';
+import NotFound from './components/common/NotFound/NotFound';
 
 
 
@@ -60,6 +61,7 @@ function App() {
 						<Route path='/login' element={<Login />} />
 						<Route path='/sign-up' element={<SignUp />} />
 					</Route>
+					<Route path='*' element={<NotFound />} />
 				</Routes>
 			</div>
 		</AuthContext.Provider>

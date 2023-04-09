@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthContext';
 import { getOne, del } from '../../../services/adService';
 import { getUserById } from '../../../services/authService';
@@ -11,6 +11,8 @@ export default function AdDetails(props){
     const [user, setUser] = useState({})
     const {auth} = useContext(AuthContext);
     const {id} = useParams();
+
+    const navigate = useNavigate();
 
     useEffect(() => {
         try {
@@ -39,7 +41,10 @@ export default function AdDetails(props){
       }, [adInfo.userId]);
 
       async function handleDelete(){
-        await del(adInfo._id);
+        if(window.confirm("Are you sure you want to delete this ad?")){
+          await del(adInfo._id);
+          navigate('/', {replace: true})
+        }
       }
 
     return (

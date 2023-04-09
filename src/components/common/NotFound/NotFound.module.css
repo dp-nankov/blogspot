@@ -1,0 +1,19 @@
+.notFound {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.notFound h1{
+    color: #1D70A2;
+    font-size: 60px;
+    font-family: 'Roboto Condensed', 'Times New Roman', Times, serif;
+}
+
+.notFound a{
+    text-decoration: none;
+    font-family: 'Roboto Condensed', 'Times New Roman', Times, serif;
+    font-size: 20px;
+}

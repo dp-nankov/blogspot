@@ -66,7 +66,7 @@ export default function Ads(){
             <input type="number" name='priceTo' placeholder="Price to:" value={searchValues.priceTo} onChange={handleChange}/>
         </div>
 
-        {filteredAds.map((x) => (<Ad key={x._id} {...x}/>))}
+        {[...filteredAds].reverse().map((x) => (<Ad key={x._id} {...x}/>))}
 
         <div className={styles["label"]}>
             {filteredAds.length === 0 && <p>No ads to show.</p>}
