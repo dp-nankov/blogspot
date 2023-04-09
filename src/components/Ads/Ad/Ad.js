@@ -20,11 +20,11 @@ export default function Ad(props){
             <div className={styles["item-buttons-div"]}>
                 <div className={styles["date-box"]}>
                     <p className={`${styles["date-label"]} ${styles["inline"]}`}>Uploaded: </p>
-                    <p className={`${styles["date"]}, ${styles["inline"]}`}>{props.created_at.split('T')[0]}</p>
+                    <p className={`${styles["date"]} ${styles["inline"]}`}>{props.created_at.split('T')[0]}</p>
                 </div>
                 <div className={styles["date-box"]}>
-                    <p className={`${styles["date-label"]}, ${styles["inline"]}`}>Last update: </p>
-                    <p className={`${styles["date"]}, ${styles["inline"]}`}>{props.updatedAt.split('T')[0]}</p>
+                    <p className={`${styles["date-label"]} ${styles["inline"]}`}>Last update: </p>
+                    <p className={`${styles["date"]} ${styles["inline"]}`}>{props.updatedAt.split('T')[0]}</p>
                 </div>
             </div>
         </div>

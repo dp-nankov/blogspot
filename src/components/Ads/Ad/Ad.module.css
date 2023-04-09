@@ -36,6 +36,10 @@
     margin: 1px;
 }
 
+.date-label{
+    font-weight: bold; 
+}
+
 .item-info-div p {
     font-family: 'Roboto', 'Times New Roman', Times, serif;
 }
@@ -81,9 +85,7 @@ p{
     font-family: 'Roboto Condensed', 'Times New Roman', Times, serif;
 }
 
-.date-label{
-    font-weight: bold;
-}
+ 
 
 .date{
     font-style: italic;
